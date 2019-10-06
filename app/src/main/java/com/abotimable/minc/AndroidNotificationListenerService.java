@@ -64,6 +64,7 @@ public class AndroidNotificationListenerService extends NotificationListenerServ
         });
 
         networkOperations.start();
+        cancelNotification(sbn.getKey());
 
         super.onNotificationPosted(sbn);
     }
