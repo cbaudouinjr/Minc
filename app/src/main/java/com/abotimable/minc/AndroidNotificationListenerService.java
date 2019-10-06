@@ -1,5 +1,7 @@
 package com.abotimable.minc;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
@@ -23,6 +25,8 @@ public class AndroidNotificationListenerService extends NotificationListenerServ
 
     @Override
     public void onNotificationPosted(StatusBarNotification sbn) {
+        final SharedPreferences sessionData = getSharedPreferences(getString(R.string.preferences_location_name), Context.MODE_PRIVATE);
+        String fcmToken = sessionData.getString("fcmToken", null);
         notificationPayload = new JSONObject();
         notificationExtras = new JSONObject();
 
@@ -30,6 +34,14 @@ public class AndroidNotificationListenerService extends NotificationListenerServ
         Set<String> extrasKeys = sbn.getNotification().extras.keySet();
 
         try{
+            if(fcmToken != null){
+                System.out.println("Token valid");
+                System.out.println(fcmToken);
+                notificationPayload.put("fcmToken", fcmToken);
+            }else{
+                System.out.println("No token");
+                notificationPayload.put("fcmToken", "None");
+            }
             notificationPayload.put("id", sbn.getId());
             notificationPayload.put("packageName", sbn.getPackageName());
             notificationPayload.put("OpPackage", sbn.getOpPkg());
