@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "426523747407",
+    "firebase_url": "https://push-notification-255101.firebaseio.com",
+    "project_id": "push-notification-255101",
+    "storage_bucket": "push-notification-255101.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426523747407:android:cf2864330786a21af7f63a",
+        "android_client_info": {
+          "package_name": "com.abotimable.minc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426523747407-70cbjd4chuu6jdf4sm3t5k849edugs8c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYNR2hodsvUm4uDl3uhmdpshWlFdXmoxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426523747407-70cbjd4chuu6jdf4sm3t5k849edugs8c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
