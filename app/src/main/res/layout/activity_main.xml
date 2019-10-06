@@ -22,4 +22,5 @@
 
     <include layout="@layout/list_applications" />
 
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
