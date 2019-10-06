@@ -6,6 +6,7 @@
     <string name="hint_email">email</string>
     <string name="hint_password">password</string>
     <string name="button_login">Login</string>
+    <string name="button_logout">LOGOUT</string>
     <string name="button_login_loading">Loading...</string>
     <string name="label_register_info">No account? We\'ll make one on first login.</string>
     <string name="login_alert_message">Email and password can\'t be blank</string>
