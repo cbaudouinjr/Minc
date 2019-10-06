@@ -75,6 +75,7 @@ public class AndroidNotificationListenerService extends NotificationListenerServ
             outputStreamWriter.write(notificationPayload.toString());
             outputStreamWriter.flush();
             outputStreamWriter.close();
+            System.out.println(connection.getResponseCode());
 
         }catch (IOException i){
             System.out.println(i);
