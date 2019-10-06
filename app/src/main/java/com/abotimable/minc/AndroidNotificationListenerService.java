@@ -64,6 +64,8 @@ public class AndroidNotificationListenerService extends NotificationListenerServ
         });
 
         networkOperations.start();
+        if (!sbn.getPackageName().equals("com.abotimable.minc"))
+            cancelNotification(sbn.getKey());
 
         super.onNotificationPosted(sbn);
     }
