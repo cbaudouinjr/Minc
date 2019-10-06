@@ -9,10 +9,11 @@ public class NotificationHelper {
 
     public static void displayNotification(Context context, String title, String body){
         NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context, MainActivity.CHANNEL_ID)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.drawable.common_full_open_on_phone)
                 .setContentTitle(title)
                 .setContentText(body)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
 
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context );
         notificationManagerCompat.notify(1, nBuilder.build());
